@@ -1,9 +1,24 @@
 {% extends 'base.html' %}
 
+{% block content %}
+<style>button {width: 300px; margin: 7px;}</style>
+
 {% load static %}
 <script src="{% static 'home.js' %}"> </script>
 
-{% block content %}
-<p>Welcome to the page</p>
-<button class="btn btn-primary">Button</button>
+<div style="height: 100%">
+    <div id="main_menu" class="vertical_menu">
+        <h1>Fighting Fantasy</h1>
+        <button class="btn btn-lg btn-primary" onclick="display_play_menu()">Play</button>
+        <button class="btn btn-lg btn-primary" disabled>Create</button>
+        <button class="btn btn-lg btn-primary" disabled>Settings</button>
+    </div>
+    <div id="play_menu" class="vertical_menu d-none">
+        <h1>Play</h1>
+        <button class="btn btn-lg btn-primary">New Adventure</button>
+        <button class="btn btn-lg btn-primary" disabled>Continue</button>
+        <button class="btn btn-lg btn-primary" onclick="display_main_menu()">Back</button>
+    </div>
+    
+</div>
 {% endblock %}
