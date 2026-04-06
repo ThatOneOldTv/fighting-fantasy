@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<style>button {width: 300px; margin: 7px;}</style>
 
 {% load static %}
 <script src="{% static 'home.js' %}"> </script>
@@ -15,7 +14,7 @@
     </div>
     <div id="play_menu" class="vertical_menu d-none">
         <h1>Play</h1>
-        <button class="btn btn-lg btn-primary">New Adventure</button>
+        <a class="btn btn-lg btn-primary" href="{% url 'new_adventure'%}">New Adventure</a>
         <button class="btn btn-lg btn-primary" disabled>Continue</button>
         <button class="btn btn-lg btn-primary" onclick="display_main_menu()">Back</button>
     </div>

@@ -9,3 +9,8 @@ html, body {
     align-items: center; 
     flex-direction: column;
 }
+
+.vertical_menu button, a {
+    width: 300px; 
+    margin: 7px;
+}
